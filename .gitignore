@@ -1,0 +1,6 @@
+app/scripts/
+app/styles/
+dist/
+node_modules/
+
+npm-debug.log
