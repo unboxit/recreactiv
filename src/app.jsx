@@ -1,14 +1,21 @@
 'use strict';
 
 var React = require('react');
+var Reflux = require('reflux');
 
-var App = React.createClass({
-
-  getInitialState() {
+var store = Reflux.createStore({
+ getInitialState() {
     return {
       message: 'Hello World!'
     }
-  },
+  }
+});
+
+var App = React.createClass({
+
+  mixins: [
+    Reflux.connect(store)
+  ],
 
   render() {
     return (
