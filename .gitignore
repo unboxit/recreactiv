@@ -1,5 +1,4 @@
-app/scripts/
-app/styles/
+app/scripts/bundle.js
 dist/
 node_modules/
 
