@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "serve": "browser-sync start --server 'app' --files 'index.html,app/**/*' --no-notify",
-    "watch-app": "watchify -t babelify ./src/app.jsx -o ./app/scripts/bundle.js -v",
+    "watch-app": "watchify -t babelify ./src/app.js -o ./app/scripts/bundle.js -v",
     "watch-specs": "mkdir -p dist && watchify -t babelify ./spec/*.* -o ./dist/specs.js -v"
   },
   "author": "",
