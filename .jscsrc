@@ -1,0 +1,5 @@
+{
+  "fileExtensions": [".js", ".jsx"],
+  "preset": "airbnb",
+  "excludeFiles": ["node_modules/**"]
+}
