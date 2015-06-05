@@ -19,6 +19,7 @@
     "browserify": "^10.2.3",
     "esprima-fb": "^14001.1.0-dev-harmony-fb",
     "jscs": "^1.11.3",
+    "jshint": "^2.6.3",
     "react": "^0.13.3",
     "reflux": "^0.2.7",
     "watchify": "^3.2.1"
