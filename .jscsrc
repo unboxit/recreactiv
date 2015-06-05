@@ -1,5 +1,6 @@
 {
   "fileExtensions": [".js", ".jsx"],
   "preset": "airbnb",
+  "esprima": "esprima-fb",
   "excludeFiles": ["node_modules/**"]
 }
