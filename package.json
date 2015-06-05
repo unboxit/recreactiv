@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "jscs": "jscs --verbose ./src",
     "serve": "browser-sync start --server 'app' --files 'index.html,app/**/*' --no-notify",
+    "test": "npm run jscs",
     "watch-app": "watchify -t babelify ./src/app.js -o ./app/scripts/bundle.js -v",
     "watch-specs": "mkdir -p dist && watchify -t babelify ./spec/*.* -o ./dist/specs.js -v"
   },
@@ -14,6 +16,7 @@
     "babelify": "^6.1.2",
     "browser-sync": "^2.7.6",
     "browserify": "^10.2.3",
+    "jscs": "^1.11.3",
     "react": "^0.13.3",
     "reflux": "^0.2.7",
     "watchify": "^3.2.1"
