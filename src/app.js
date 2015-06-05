@@ -4,7 +4,7 @@ var React = require('react');
 var Reflux = require('reflux');
 
 var store = Reflux.createStore({
- getInitialState() {
+  getInitialState() {
     return {
       message: 'Hello World!'
     }
