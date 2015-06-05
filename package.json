@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "jscs": "jscs --verbose ./src",
+    "lint": "jshint --verbose --show-non-errors --config=.jshintrc **/*.js",
     "serve": "browser-sync start --server 'app' --files 'index.html,app/**/*' --no-notify",
-    "test": "npm run jscs",
+    "test": "npm run jscs && npm run lint",
     "watch-app": "watchify -t babelify ./src/app.js -o ./app/scripts/bundle.js -v",
     "watch-specs": "mkdir -p dist && watchify -t babelify ./spec/*.* -o ./dist/specs.js -v"
   },
