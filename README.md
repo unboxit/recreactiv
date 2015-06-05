@@ -11,3 +11,5 @@ __Development__
 - `$ npm run watch-app`
 
 - `$ npm run serve`
+
+- `$ npm run test`
