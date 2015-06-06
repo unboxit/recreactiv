@@ -7,7 +7,7 @@ var store = Reflux.createStore({
   getInitialState() {
     return {
       message: 'Hello World!'
-    }
+    };
   }
 });
 
