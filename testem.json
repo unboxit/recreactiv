@@ -1,0 +1,14 @@
+{
+  "framework": "jasmine2",
+  "launch_in_dev" : ["PhantomJS"],
+  "launch_in_ci" : ["PhantomJS"],
+  "before_tests": "npm run watch-spec && npm run watch",
+  "on_exit": "rm -rfv ./dist",
+  "src_files": [
+    "./app/scripts/bundle.js"
+  ],
+  "serve_files": [
+    "./app/scripts/bundle.js",
+    "./dist/specs.js"
+  ]
+}

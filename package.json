@@ -4,24 +4,38 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "jscs": "jscs --verbose ./src",
-    "lint": "jshint --verbose --show-non-errors --config=.jshintrc **/*.js",
+    "build": "browserify -t babelify ./src/app.js -o ./app/scripts/bundle.js -v",
+    "build-spec": "mkdir -p dist && browserify -t babelify ./spec/suite.js -o ./dist/specs.js -v",
+    "eslint": "eslint ./src --ext=.js --ext=.jsx",
+    "jsxcs": "jsxcs --verbose ./src",
+    "lint": "npm run jsxcs && npm run eslint",
+    "pretest": "npm run build && npm run build-spec",
     "serve": "browser-sync start --server 'app' --files 'index.html,app/**/*' --no-notify",
-    "test": "npm run jscs && npm run lint",
-    "watch-app": "watchify -t babelify ./src/app.js -o ./app/scripts/bundle.js -v",
-    "watch-specs": "mkdir -p dist && watchify -t babelify ./spec/*.* -o ./dist/specs.js -v"
+    "tape": "npm run buid-test && tape ./dist/*.js | faucet",
+    "test": "npm run jsxcs && npm run eslint",
+    "test-ci": "testem ci",
+    "watch": "watchify -t babelify ./src/app.js -o ./app/scripts/bundle.js -v",
+    "watch-spec": "mkdir -p dist && watchify -t babelify ./spec/*.js -o ./dist/specs.js -v"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "babel-eslint": "^3.1.13",
     "babelify": "^6.1.2",
     "browser-sync": "^2.7.6",
-    "browserify": "^10.2.3",
-    "esprima-fb": "^14001.1.0-dev-harmony-fb",
-    "jscs": "^1.11.3",
-    "jshint": "^2.6.3",
-    "react": "^0.13.3",
-    "reflux": "^0.2.7",
+    "browserify": "^10.2.4",
+    "eslint": "^0.22.1",
+    "faucet": "0.0.1",
+    "jasmine": "^2.3.1",
+    "jsxcs": "^0.2.1",
+    "mocha": "^2.2.5",
+    "tape": "^4.0.0",
+    "testem": "^0.8.3",
     "watchify": "^3.2.1"
+  },
+  "dependencies": {
+    "react": "^0.13.3",
+    "react-router": "^0.13.3",
+    "reflux": "^0.2.7"
   }
 }
