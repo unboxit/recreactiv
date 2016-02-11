@@ -11,6 +11,7 @@
     "url": "http://github.com/unboxit/recreactive.git/issues"
   },
   "scripts": {
+    "bithound": "bithound check git@github.com:unboxit/recreactive.git",
     "build": "browserify -t babelify ./src/app.js -o ./app/scripts/bundle.js -v",
     "build-spec": "mkdir -p dist && browserify -t babelify ./spec/suite.js -o ./dist/specs.js -v",
     "eslint": "eslint ./src --ext=.js --ext=.jsx",
@@ -19,7 +20,7 @@
     "pretest": "npm run build && npm run build-spec",
     "serve": "browser-sync start --server 'app' --files 'index.html,app/**/*' --no-notify",
     "tape": "npm run buid-test && tape ./dist/*.js | faucet",
-    "test": "npm run jsxcs && npm run eslint",
+    "test": "npm run jsxcs && npm run eslint && npm run bithound",
     "test-ci": "testem ci",
     "watch": "watchify -t babelify ./src/app.js -o ./app/scripts/bundle.js -v",
     "watch-spec": "mkdir -p dist && watchify -t babelify ./spec/*.js -o ./dist/specs.js -v"
@@ -29,6 +30,7 @@
   "devDependencies": {
     "babel-eslint": "^3.1.13",
     "babelify": "^6.1.2",
+    "bithound": "^1.0.0",
     "browser-sync": "^2.7.6",
     "browserify": "^10.2.4",
     "eslint": "^0.22.1",
