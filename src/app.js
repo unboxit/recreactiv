@@ -1,12 +1,13 @@
 'use strict';
 
 var React = require('react');
+var ReactDOM = require('react-dom');
 var Reflux = require('reflux');
 
 var store = Reflux.createStore({
   getInitialState: function() {
     return {
-      message: 'Hello World!'
+      message: 'Hello World!!!'
     };
   }
 });
@@ -27,4 +28,4 @@ var App = React.createClass({
 
 });
 
-React.render(<App/>, document.getElementById('app'));
+ReactDOM.render(<App/>, document.getElementById('app'));

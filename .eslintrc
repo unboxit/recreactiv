@@ -14,14 +14,14 @@ rules:
   no-bitwise: 0
   no-catch-shadow: 2
   no-console: 2
-  no-comma-dangle: 2
+  comma-dangle: 2
   no-control-regex: 2
   no-debugger: 2
   no-div-regex: 2
   no-dupe-keys: 2
   no-else-return: 2
   no-empty: 2
-  no-empty-class: 2
+  no-empty-character-class: 2
   no-eq-null: 2
   no-eval: 2
   no-ex-assign: 2
@@ -53,12 +53,12 @@ rules:
   no-underscore-dangle: 2
   no-loop-func: 2
   no-empty-label: 2
-  no-unused-vars: 1
+  no-unused-vars: 0
   no-script-url: 2
   no-proto: 2
   no-iterator: 2
   no-mixed-requires: [0, false]
-  no-wrap-func: 2
+  no-extra-parens: [2, functions]
   no-shadow: 2
   no-use-before-define: 0
   no-redeclare: 2
@@ -84,11 +84,17 @@ rules:
   quote-props: 0
   radix: 0
   semi: 2
-  strict: 2
+  strict: [2, global]
   unnecessary-strict: 0
   use-isnan: 2
   valid-typeof: 0
   wrap-iife: 2
   wrap-regex: 0
 
-
+globals:
+  describe: true
+  beforeEach: true
+  it: true
+  expect: true
+  afterEach: true
+  require: true
