@@ -1,6 +1,4 @@
-app/scripts/bundle.js
-dist/
 node_modules/
-target/
+public/
 
 npm-debug.log

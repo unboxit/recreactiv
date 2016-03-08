@@ -2,14 +2,21 @@
 
 Try out React
 
-__Installation__
+__Setup__
 
 - `$ npm install`
 
 __Development__
 
-- `$ npm run watch-app`
+- `$ npm run start:dev`
 
-- `$ npm run serve`
+- `$ npm run test:watch`
 
-- `$ npm run test`
+
+__Test__
+
+- `$ npm run lint`
+
+- `$ npm test`
+
+- `$ npm run build`

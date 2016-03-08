@@ -1,7 +1,0 @@
-javascript:
-  enabled: false
-  eslint:
-    enabled: true
-jscs:
-  enabled: true
-  config_file: .jscsrc

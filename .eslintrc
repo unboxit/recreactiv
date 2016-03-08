@@ -1,11 +1,17 @@
+extends: eslint:recommended
+parserOptions:
+  sourceType: module
+  ecmaVersion: 6
+
+ecmaFeatures:
+  templateStrings: true
+  modules: true
+  jsx: true
+
 env:
   browser: true
   node: true
   amd: true
-
-ecmaFeatures:
-  templateStrings: true
-  jsx: true
 
 rules:
   no-alert: 2
@@ -52,7 +58,7 @@ rules:
   no-sync: 2
   no-underscore-dangle: 2
   no-loop-func: 2
-  no-empty-label: 2
+  no-labels: 2
   no-unused-vars: 0
   no-script-url: 2
   no-proto: 2
@@ -92,6 +98,7 @@ rules:
   wrap-regex: 0
 
 globals:
+  import: true
   describe: true
   beforeEach: true
   it: true
