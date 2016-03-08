@@ -25,8 +25,8 @@
     "lint": "npm run jscs && npm run eslint",
     "prestart": "npm run build",
     "start:dev": "hjs-dev-server",
-    "test": "mocha client/*.spec.js --opts .mocha.opts --reporter min",
-    "test:watch": "mocha client/*.spec.js --opts .mocha.opts --watch"
+    "test": "mocha client/*.spec.js --reporter min",
+    "test:watch": "mocha client/*.spec.js --watch"
   },
   "author": "",
   "license": "MIT",
